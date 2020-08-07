@@ -1,0 +1,240 @@
+@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
+@import url(../node_modules/font-awesome/css/font-awesome.min.css);
+@import url(../node_modules/bootstrap-social/bootstrap-social.css);
+/* Add a background color to the top navigation */
+.topnav {
+  background-color: white;
+  overflow: hidden;
+  /* Align topnav right */ }
+  .topnav .link-container {
+    float: right; }
+
+/* Style the links inside the navigation bar */
+.topnav a.site-title {
+  float: left;
+  color: #303030;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 20px; }
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: white;
+  color: #ff1493; }
+
+/* Show blue color when hover over*/
+.btn:hover {
+  color: #ff1493; }
+
+/* Add a background color to the footer */
+.footer {
+  background-color: white;
+  overflow: hidden;
+  color: #303030;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+  font-size: 25px; }
+
+/*Change colors the social icons*/
+a.btn-instagram, .btn-facebook, .btn-twitter, .btn-linkedin {
+  color: white;
+  background-color: #303030; }
+
+/*Change padding of container*/
+.containerone {
+  padding: 10px 10px; }
+
+/* Change the color of links on hover */
+.containertwo a:hover {
+  color: #ff1493; }
+
+/* Add color and modify font and colors to intro h2 */
+.introduction h2 {
+  color: #303030;
+  text-align: center;
+  font-size: 30px; }
+
+/* Change color and font size of email in footer */
+.btn-link {
+  color: #303030;
+  font-size: 25px; }
+
+/*Set height of the page container */
+.page-container {
+  min-height: 110px; }
+
+/* Change the color of links on hover */
+.dropdown-menu a:hover {
+  color: #ff1493; }
+
+.btn:focus {
+  box-shadow: none; }
+
+/*Center button container and add margin and outline to button group*/
+.button-container {
+  display: flex;
+  justify-content: center; }
+  .button-container .btn-group {
+    margin: 0 2px; }
+    .button-container .btn-group .btn:active {
+      outline: 1px solid #ff1493; }
+
+/*Add a cursor to dropdown menu*/
+.dropdown-item {
+  cursor: pointer; }
+
+.custom-select {
+  color: #303030;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center; }
+
+select {
+  text-align: center;
+  text-align-last: center;
+  /* webkit*/ }
+
+option {
+  text-align-last: left;
+  /* reset to left*/ }
+
+.custom-select:focus {
+  color: #ff1493;
+  background-color: white;
+  border-color: #ff1493;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem #ff1493; }
+
+/* Align carousel button group to lower right hand side*/
+.carousel-btn-group {
+  position: absolute;
+  right: 0;
+  bottom: 0; }
+
+/* Change modal titles to pink*/
+.modal-title {
+  color: #ff1493; }
+
+/* Change form check of "remember me" to pink*/
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #ff1493;
+  border: 2px solid #303030; }
+
+/* Change border colors of registration and log in forms to pink when focus*/
+.form-control:focus {
+  color: #ff1493;
+  background-color: white;
+  border-color: #ff1493;
+  outline: 0;
+  box-shadow: 0 0 0 0.1rem #ff1493; }
+
+/*Change text to pink color*/
+.pink-text {
+  color: #ff1493; }
+
+/* Styling for Profile page starting from this line*/
+body {
+  background-color: white; }
+
+.emp-profile {
+  padding: 0 3% 3% 3%;
+  margin-bottom: 3%;
+  border-radius: 0.5rem;
+  background: white; }
+
+.picture-and-about-container {
+  display: flex; }
+
+.profile-img {
+  text-align: center; }
+
+.profile-img img {
+  width: 70%; }
+
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -20%;
+  width: 70%;
+  border: none;
+  border-radius: 0;
+  font-size: 15px;
+  background: #303030; }
+
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0; }
+
+.profile-head h5 {
+  color: #303030; }
+
+.profile-head h6 {
+  color: #ff1493; }
+
+.profile-head .nav-tabs {
+  margin-bottom: 1%; }
+  .profile-head .nav-tabs .nav-link {
+    font-weight: 600;
+    color: #ff1493;
+    border: none; }
+    .profile-head .nav-tabs .nav-link.active {
+      border: none;
+      border-bottom: 4px solid #303030; }
+
+.profile-tab label {
+  font-weight: 600; }
+
+.profile-tab p {
+  font-weight: 600;
+  color: #ff1493; }
+
+.container-video {
+  display: flex;
+  flex-wrap: wrap; }
+  .container-video .video-box {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    width: 300px;
+    height: 200px;
+    margin: 3px; }
+
+/* Styling for Quick Survey page starting from this line*/
+/* Change the radio buttons to pink*/
+input[type='radio']:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: white;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #303030; }
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  background-color: #ff1493;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid #303030; }
+
+.filtered-video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .filtered-video-container .video-description {
+    width: 750px;
+    padding: 0 10px; }

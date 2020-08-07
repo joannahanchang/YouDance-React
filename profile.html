@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags always come first -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link rel="stylesheet" href="./css/styles.css" />
+
+	<!-- Bootstrap CSS -->
+	<!-- <link rel="stylesheet" href="assets/bootstrap.min.css" /> -->
+
+	<!-- Additional CSS must be placed after Bootstrap CSS -->
+	<!-- <link rel="stylesheet" href="assets/font-awesome.min.css" /> -->
+	<!-- <link rel="stylesheet" href="assets/bootstrap-social.css" /> -->
+
+	<!-- <link rel="stylesheet" href="./styles.css"> -->
+</head>
+
+<body>
+	<div class="topnav">
+			<a class="active site-title" href="index.html">YouDance</a>
+    </div>
+    
+    <div class="page-container">
+        <div class="introduction">
+            <h2>Welcome to your YouDance profile!</h2> 
+        </div>
+    </div>
+    <div class="picture-and-about-container">
+        <div class="profile-img">
+            <img src="20200216_154954.jpg" alt="Profile Photo"/>
+            <div class="file btn btn-lg btn-primary">
+                Change Photo
+                <input type="file" name="file"/>
+            </div>
+        </div>
+        <div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="profile-head">
+                            <h4>Jojo Yoyo</h4>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="video-tab" data-toggle="tab" href="#video" role="tab" aria-controls="video" aria-selected="true">Videos Saved</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-2">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>First Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Jojo</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Last Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Yoyo</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>jojoyoyo@gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Last Log In</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>July 10, 2020</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Total Number of Videos Watched</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>15</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Estimated Number of Calories Burned</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>7,500</p>
+                                            </div>
+                                        </div>
+                            </div>
+                            <div class="tab-pane fade" id="video" role="tabpanel" aria-labelledby="video-tab">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="container-video">
+                                            <div class="video-box">
+                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/ZWk19OVon2k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="video-box">
+                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/GE3SoUQ5GwU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="video-box">
+                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/8TOIWNAVADw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="video-box">
+                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/8DZktowZo_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <div class="video-box">
+                                                <iframe width="300" height="200" src="https://www.youtube.com/embed/NjE7MRnvTD4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="containerone">
+            <div class="text-center">
+                <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+                <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                <a class="btn btn-social-icon btn-linkedin" href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="containertwo">
+            <div class="text-center">
+                <a role="button" class="btn btn-link" href="tel:+19091234567"><i class="fa fa-phone"></i> 1-909-123-4567</a>
+                <a role="button" class="btn btn-link" href="mailto:contact@youdance.com"><i class="fa fa-envelope-o"></i> contact@youdance.com</a>
+            </div>
+        </div>
+        <!-- </div> -->
+    </footer>
+
+        <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+        <!-- build:js js/main.js -->
+        <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+</body>
+</html>
