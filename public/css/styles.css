@@ -1,6 +1,6 @@
-@import url(../node_modules/bootstrap/dist/css/bootstrap.min.css);
-@import url(../node_modules/font-awesome/css/font-awesome.min.css);
-@import url(../node_modules/bootstrap-social/bootstrap-social.css);
+@import url(./bootstrap.min.css);
+@import url(./font-awesome.min.css);
+@import url(./bootstrap-social.css);
 /* Add a background color to the top navigation */
 .topnav {
   background-color: white;
