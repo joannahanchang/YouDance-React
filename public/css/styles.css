@@ -6,7 +6,7 @@
   background-color: white;
   overflow: hidden;
   /* Align topnav right */ }
-  .topnav .link-container {
+.topnav .link-container {
     float: right; }
 
 /* Style the links inside the navigation bar */

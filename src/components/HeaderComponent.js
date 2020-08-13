@@ -1,20 +1,66 @@
 import React from 'react';
 // import './App.css';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
 
 class Header extends React.Component {
+
+  constructor(props) {
+    super(props);
+
+    this.toggleNav = this.toggleNav.bind(this);
+    this.state = {
+      isNavOpen: false
+    };
+}
+
+toggleNav() {
+    this.setState({
+        isNavOpen: !this.state.isNavOpen
+    });
+}
+
   render() {
     return (
-      <div className="topnav">
-        <a className="active site-title" href="index.html">YouDance</a>
-        <div className="link-container">
-          <button type="button" className="btn btn-lg" id="registerButton">Register</button>
-          <button type="button" className="btn btn-lg" id="loginButton">Log In</button>
-          <a className="btn btn-lg" href="profile.html">Profile</a>
-          <button type="button" className="btn btn-lg" id="surveyButton">Quick Survey</button>
+       <div className="topnav">
+          <NavbarBrand className="mr-auto active site-title" href="/">YouDance</NavbarBrand>
+          <NavbarToggler onClick={this.toggleNav} />
+          <Collapse isOpen={this.state.isNavOpen} navbar></Collapse>
+            <div class="link-container">
+              <NavLink to ='/register'>
+                <button type="button" class="btn btn-lg">Register</button>
+              </NavLink>
+              <NavLink to ='/login'>
+                <button type="button" class="btn btn-lg">log In</button>
+                </NavLink>
+                <NavLink to ='/profile'>
+                <button type="button" class="btn btn-lg">Profile</button>
+                </NavLink>
+                <NavLink to ='/quicksurvey'>
+                <button type="button" class="btn btn-lg">Quick Survey</button>
+                </NavLink>
+            </div>
         </div>
-      </div>
     ); 
   }
 }
 
+
 export default Header;
+
+
+
+           {/* <Nav navbar>
+              <NavItem>
+            <NavbarBrand className="mr-auto active site-title" href="/">YouDance</NavbarBrand>
+              </NavItem>
+              <NavItem>
+            <NavLink className="nav-link" to="/login">Log In</NavLink>
+              </NavItem>
+              <NavItem>
+            <NavLink className="nav-link" to="/profile">Profile</NavLink>
+              </NavItem>
+              <NavItem>
+            <NavLink className="nav-link" to="/survey">Quick Survey</NavLink>
+              </NavItem>
+            </Nav> */}
