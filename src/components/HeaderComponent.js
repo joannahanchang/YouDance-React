@@ -1,7 +1,7 @@
 import React from 'react';
 // import './App.css';
 
-class NavBar extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <div className="topnav">
@@ -13,9 +13,8 @@ class NavBar extends React.Component {
           <button type="button" className="btn btn-lg" id="surveyButton">Quick Survey</button>
         </div>
       </div>
-    );
-  
+    ); 
   }
 }
 
-export default NavBar;
+export default Header;
