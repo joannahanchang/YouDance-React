@@ -43,4 +43,4 @@ class Welcome extends React.Component {
     }
   }
   
-  export default Welcome;
+export default Welcome;

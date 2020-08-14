@@ -36,7 +36,7 @@ toggleNav() {
                 <NavLink to ='/profile'>
                 <button type="button" class="btn btn-lg">Profile</button>
                 </NavLink>
-                <NavLink to ='/quicksurvey'>
+                <NavLink to ='/survey'>
                 <button type="button" class="btn btn-lg">Quick Survey</button>
                 </NavLink>
             </div>
