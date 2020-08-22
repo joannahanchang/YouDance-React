@@ -5,9 +5,10 @@ import Modal from 'react-modal';
 // import './App.css';
 
 class Register extends React.Component {
-  state = { show: false };
+  state = { show: true };
 
   showModal = () => {
+	  console.log('showModal', this)
     this.setState({ show: true });
   };
 
@@ -16,6 +17,7 @@ class Register extends React.Component {
   };
 
   render() {
+	  console.log('render', this.state)
     return (
       <main>
         <Modal show={this.state.show} handleClose={this.hideModal}>

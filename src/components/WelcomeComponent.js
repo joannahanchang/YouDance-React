@@ -2,8 +2,35 @@ import React from 'react';
 // import './App.css';
 
 class Welcome extends React.Component {
+
+    constructor() {
+        super()
+        this.state = {
+
+        }
+    }
+
+    setStateAndEmit(partialState) {
+        const nextState = {
+            ...this.state,
+            ...partialState,
+        };
+        this.setState(nextState);
+        this.props.onChange(nextState);
+    }
+
     render() {
-      return (
+        const setDanceStyle = (event) => {
+            this.setStateAndEmit({
+                danceStyle: event.target.value,
+            });
+        }
+        const setIntensityLevel = (event) => {
+            this.setStateAndEmit({
+                intensityLevel: event.target.value,
+            });
+        }
+        return (
         <React.Fragment>
         <div className="page-container">
             <div className="introduction">
@@ -11,7 +38,7 @@ class Welcome extends React.Component {
             </div>
             <div className="button-container">
                 <div className="btn-group text-center">
-                    <select className="custom-select text-center" id="dance-style">
+                    <select className="custom-select text-center" id="dance-style" onChange={setDanceStyle}>
                         <option selected>Dance Type</option>
                         <option value="barre">Barre</option>
                         <option value="hipHop">Hip Hop</option>
@@ -20,7 +47,7 @@ class Welcome extends React.Component {
                     </select>
                 </div>
                 <div className="btn-group text-center">
-                    <select className="custom-select text-center" id="intensity">
+                    <select className="custom-select text-center" id="intensity" onChange={setIntensityLevel}>
                         <option selected>Intensity Level</option>
                         <option value="low">Low</option>
                         <option value="moderate">Moderate</option>
