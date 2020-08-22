@@ -2,6 +2,9 @@ import React from 'react';
 // import './App.css';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import Register from './RegisterComponent';
+import Login from './LoginComponent';
+import Survey from './SurveyComponent';
 
 class Header extends React.Component {
 
@@ -10,57 +13,50 @@ class Header extends React.Component {
 
     this.toggleNav = this.toggleNav.bind(this);
     this.state = {
-      isNavOpen: false
+      isNavOpen: false,
+      openModalName: undefined,
     };
-}
+  }
 
-toggleNav() {
+  toggleNav() {
+      this.setState({
+          isNavOpen: !this.state.isNavOpen
+      });
+  }
+
+  setOpenModalName(modalName) {
     this.setState({
-        isNavOpen: !this.state.isNavOpen
+      openModalName: modalName,
     });
-}
+  }
 
   render() {
+    console.log('this.state.openModalName', this.state.openModalName)
     return (
        <div className="topnav">
           <NavbarBrand className="mr-auto active site-title" href="/">YouDance</NavbarBrand>
           <NavbarToggler onClick={this.toggleNav} />
           <Collapse isOpen={this.state.isNavOpen} navbar></Collapse>
-            <div class="link-container">
-              <NavLink to ='/register'>
-                <button type="button" class="btn btn-lg">Register</button>
-              </NavLink>
-              <NavLink to ='/login'>
-                <button type="button" class="btn btn-lg">log In</button>
-                </NavLink>
+            <div className="link-container">
+                <a onClick={this.setOpenModalName.bind(this, 'REGISTER')}>
+                  <button type="button" className="btn btn-lg">Register</button>
+                </a>
+                <a onClick={this.setOpenModalName.bind(this, 'LOGIN')}>
+                  <button type="button" className="btn btn-lg">log In</button>
+                </a>
                 <NavLink to ='/profile'>
-                <button type="button" class="btn btn-lg">Profile</button>
+                <button type="button" className="btn btn-lg">Profile</button>
                 </NavLink>
-                <NavLink to ='/survey'>
-                <button type="button" class="btn btn-lg">Quick Survey</button>
-                </NavLink>
+                <a onClick={this.setOpenModalName.bind(this, 'SURVEY')}>
+                  <button type="button" className="btn btn-lg">Quick Survey</button>
+                </a>
             </div>
+            <Register isOpen={ this.state.openModalName === 'REGISTER' } />
+            <Login isOpen={ this.state.openModalName === 'LOGIN' } />
+            <Survey isOpen={ this.state.openModalName === 'SURVEY' } />       
         </div>
     ); 
   }
 }
 
-
 export default Header;
-
-
-
-           {/* <Nav navbar>
-              <NavItem>
-            <NavbarBrand className="mr-auto active site-title" href="/">YouDance</NavbarBrand>
-              </NavItem>
-              <NavItem>
-            <NavLink className="nav-link" to="/login">Log In</NavLink>
-              </NavItem>
-              <NavItem>
-            <NavLink className="nav-link" to="/profile">Profile</NavLink>
-              </NavItem>
-              <NavItem>
-            <NavLink className="nav-link" to="/survey">Quick Survey</NavLink>
-              </NavItem>
-            </Nav> */}

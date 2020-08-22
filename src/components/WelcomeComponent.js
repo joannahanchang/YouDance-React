@@ -38,8 +38,8 @@ class Welcome extends React.Component {
             </div>
             <div className="button-container">
                 <div className="btn-group text-center">
-                    <select className="custom-select text-center" id="dance-style" onChange={setDanceStyle}>
-                        <option selected>Dance Type</option>
+                    <select defaultValue="" className="custom-select text-center" id="dance-style" onChange={setDanceStyle}>
+                        <option value="">Dance Type</option>
                         <option value="barre">Barre</option>
                         <option value="hipHop">Hip Hop</option>
                         <option value="zumba">Zumba</option>
@@ -47,16 +47,16 @@ class Welcome extends React.Component {
                     </select>
                 </div>
                 <div className="btn-group text-center">
-                    <select className="custom-select text-center" id="intensity" onChange={setIntensityLevel}>
-                        <option selected>Intensity Level</option>
+                    <select defaultValue="" className="custom-select text-center" id="intensity" onChange={setIntensityLevel}>
+                        <option value="">Intensity Level</option>
                         <option value="low">Low</option>
                         <option value="moderate">Moderate</option>
                         <option value="high">High</option>
                         </select>
                 </div>
                 <div className="btn-group text-center">
-                    <select className="custom-select text-center" id="views">
-                        <option selected># of Views on YouTube</option>
+                    <select defaultValue="" className="custom-select text-center" id="views">
+                        <option value=""># of Views on YouTube</option>
                         <option value="lessThan5K">Less Than 5K</option>
                         <option value="5Kto10K">5K - 10K</option>
                         <option value="10KPlus">10K+</option>

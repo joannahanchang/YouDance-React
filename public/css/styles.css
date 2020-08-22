@@ -6,7 +6,7 @@
   background-color: white;
   overflow: hidden;
   /* Align topnav right */ }
-.topnav .link-container {
+  .topnav .link-container {
     float: right; }
 
 /* Style the links inside the navigation bar */
@@ -26,6 +26,10 @@
 /* Show blue color when hover over*/
 .btn:hover {
   color: #ff1493; }
+
+/*Change color of body to white */
+body {
+  background-color: white; }
 
 /* Add a background color to the footer */
 .footer {
@@ -69,6 +73,7 @@ a.btn-instagram, .btn-facebook, .btn-twitter, .btn-linkedin {
 .dropdown-menu a:hover {
   color: #ff1493; }
 
+/*Set to no shadow when focusing on the button */
 .btn:focus {
   box-shadow: none; }
 
@@ -85,27 +90,31 @@ a.btn-instagram, .btn-facebook, .btn-twitter, .btn-linkedin {
 .dropdown-item {
   cursor: pointer; }
 
+/*Style and align dropdown menu items*/
 .custom-select {
   color: #303030;
   vertical-align: middle;
   text-align: center;
   align-items: center; }
 
-select {
-  text-align: center;
-  text-align-last: center;
-  /* webkit*/ }
-
-option {
-  text-align-last: left;
-  /* reset to left*/ }
-
+/*Style and align dropdown menu items when focused*/
 .custom-select:focus {
   color: #ff1493;
   background-color: white;
   border-color: #ff1493;
   outline: 0;
   box-shadow: 0 0 0 0.1rem #ff1493; }
+
+/*Align dropdown menu items */
+select {
+  text-align: center;
+  text-align-last: center;
+  /* webkit*/ }
+
+/*Align dropdown menu items */
+option {
+  text-align-last: left;
+  /* reset to left*/ }
 
 /* Align carousel button group to lower right hand side*/
 .carousel-btn-group {
@@ -134,10 +143,7 @@ option {
 .pink-text {
   color: #ff1493; }
 
-/* Styling for Profile page starting from this line*/
-body {
-  background-color: white; }
-
+/* Styling and alignment for Profile page starting from line 184 through 262*/
 .emp-profile {
   padding: 0 3% 3% 3%;
   margin-bottom: 3%;
@@ -203,8 +209,7 @@ body {
     height: 200px;
     margin: 3px; }
 
-/* Styling for Quick Survey page starting from this line*/
-/* Change the radio buttons to pink*/
+/* Styling and alignment for Quick Survey page starting from line 265 to 300*/
 input[type='radio']:after {
   width: 15px;
   height: 15px;
