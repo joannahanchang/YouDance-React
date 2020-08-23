@@ -70,7 +70,6 @@ class Welcome extends React.Component {
                 </div>
             </div>
         </div>
-        {/* <div id="target-element" className="filtered-video-container">select some stuff</div> */}
         </React.Fragment>
       ); 
     }

@@ -1,6 +1,5 @@
 import React from 'react';
-// import './App.css';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import Register from './RegisterComponent';
 import Login from './LoginComponent';

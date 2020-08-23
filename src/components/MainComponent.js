@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from "react-dom";
-// import './App.css';
-
 import Header from './HeaderComponent.js';
 import Welcome from './WelcomeComponent.js';
 import Carousel from './CarouselComponent.js';
 import Footer from './FooterComponent.js';
 import VideoList from './VideoListComponent.js';
-// import Register from './RegisterComponent';
-// import Login from './LoginComponent';
 import Profile from './ProfileComponent';
-// import Survey from './SurveyComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class Main extends Component {

@@ -1,7 +1,3 @@
-// // import React from 'react';
-// import ReactDOM from "react-dom";
-// // import Modal from 'react-modal';
-
 import React, { Component } from 'react';
 
 class VideoList extends Component {
