@@ -8,9 +8,6 @@ import { Button, Modal, ModalHeader, ModalBody, Label, Col, Row } from 'reactstr
 import { Control, LocalForm, Errors } from 'react-redux-form';
 
 const required = val => val && val.length;
-const validEmail = val => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
-const validPassword = val => /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/i.test(val);
-
 // import './App.css';
 
 class Survey extends Component {
@@ -51,7 +48,7 @@ class Survey extends Component {
     handleSubmit(values) {
         console.log('this', this)
         console.log('values', values)
-        alert(`Satisfaction: ${values.email} Intensity: ${values.password}`);
+        alert(`URL: ${values.url} Satisfaction: ${values.satisfaction} Intensity: ${values.intensity}`);
         this.toggleModal();
     }
 
@@ -65,6 +62,31 @@ class Survey extends Component {
                 <ModalBody>
                 <div className="col-md-12">
                     <LocalForm onSubmit={values => this.handleSubmit(values)}>
+                            <Row className="form-group">
+                            <Label htmlFor="url" md={12}>Which workout video did you watch?  Copy and paste the URL here:</Label>
+                            <Col md={12}>
+                                <Control.textarea 
+                                model=".url" 
+                                id="url" 
+                                name="url"
+                                rows="2"
+                                className="form-control"
+                                validators={{
+                                    required
+                                }}
+                            >
+                                </Control.textarea>
+                                <Errors
+                                className="text-danger"
+                                model=".url"
+                                show="touched"
+                                component="div"
+                                messages={{
+                                required: 'URL required'
+                                    }}
+                                />
+                            </Col>
+                            </Row>
                             <Row className="form-group">
                                 <Label htmlFor="satisfaction" md={12}>On a scale of 1 to 5, 5 being extremely satisfied, how satisfied are you with this workout?</Label>
                                 <Col md={12}>
@@ -131,7 +153,7 @@ class Survey extends Component {
                                 </Col>
                             </Row>
                     </LocalForm>
-                    </div>
+                </div>
                 </ModalBody>
                 </Modal>
             </React.Fragment>
