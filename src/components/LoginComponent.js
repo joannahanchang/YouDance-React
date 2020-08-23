@@ -32,11 +32,22 @@ class Login extends Component {
         });
     }
 
+    // toggleModal() {
+    //     this.setState({
+    //         isModalOpen: !this.state.isModalOpen
+    //     });
+    // }
+
     toggleModal() {
+        if (this.state.isModalOpen) {
+            console.log(this.props);
+            this.props.onCloseModal()
+        }
         this.setState({
             isModalOpen: !this.state.isModalOpen
         });
     }
+
 
     handleSubmit(values) {
         console.log('this', this)

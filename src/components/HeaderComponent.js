@@ -16,6 +16,7 @@ class Header extends React.Component {
       isNavOpen: false,
       openModalName: undefined,
     };
+    this.boundCloseModal = this.setOpenModalName.bind(this, '');
   }
 
   toggleNav() {
@@ -51,9 +52,9 @@ class Header extends React.Component {
                   <button type="button" className="btn btn-lg">Quick Survey</button>
                 </a>
             </div>
-            <Register isOpen={ this.state.openModalName === 'REGISTER' } />
-            <Login isOpen={ this.state.openModalName === 'LOGIN' } />
-            <Survey isOpen={ this.state.openModalName === 'SURVEY' } />       
+            <Register isOpen={ this.state.openModalName === 'REGISTER' } onCloseModal={this.boundCloseModal}/>
+            <Login isOpen={ this.state.openModalName === 'LOGIN' } onCloseModal={this.boundCloseModal}/>
+            <Survey isOpen={ this.state.openModalName === 'SURVEY' } onCloseModal={this.boundCloseModal}/>       
         </div>
     ); 
   }

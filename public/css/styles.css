@@ -107,8 +107,8 @@ a.btn-instagram, .btn-facebook, .btn-twitter, .btn-linkedin {
 
 /*Align dropdown menu items */
 select {
-  text-align: center;
-  text-align-last: center;
+  text-align: left;
+  text-align-last: left;
   /* webkit*/ }
 
 /*Align dropdown menu items */
