@@ -6,7 +6,6 @@ class Welcome extends React.Component {
     constructor() {
         super()
         this.state = {
-
         }
     }
 
@@ -30,6 +29,13 @@ class Welcome extends React.Component {
                 intensityLevel: event.target.value,
             });
         }
+
+        const setNumberOfViews = (event) => {
+            this.setStateAndEmit({
+                numberOfViews: event.target.value,
+            });
+        }
+
         return (
         <React.Fragment>
         <div className="page-container">
@@ -55,7 +61,7 @@ class Welcome extends React.Component {
                         </select>
                 </div>
                 <div className="btn-group text-center">
-                    <select defaultValue="" className="custom-select text-center" id="views">
+                    <select defaultValue="" className="custom-select text-center" id="views" onChange={setNumberOfViews}>
                         <option value=""># of Views on YouTube</option>
                         <option value="lessThan5K">Less Than 5K</option>
                         <option value="5Kto10K">5K - 10K</option>
@@ -64,10 +70,10 @@ class Welcome extends React.Component {
                 </div>
             </div>
         </div>
-        <div id="target-element" className="filtered-video-container">select some stuff</div>
+        {/* <div id="target-element" className="filtered-video-container">select some stuff</div> */}
         </React.Fragment>
       ); 
     }
-  }
-  
+}
+
 export default Welcome;
